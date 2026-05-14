@@ -1,0 +1,591 @@
+/* ------------------ ОБЩИЕ СТИЛИ ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #faf5ef;
+    scroll-behavior: smooth;
+}
+
+/* ------------------ ШАПКА ------------------ */
+header {
+    background: linear-gradient(135deg, #2c1810, #5c2e1e);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #ffd89b, #ffb347);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #ffd89b;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 184, 71, 0.3);
+}
+
+/* ------------------ ЗАГОЛОВОК "КАТАЛОГ" ------------------ */
+.menu-title {
+    text-align: center;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    background: linear-gradient(135deg, #5c2e1e 0%, #ffb347 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.menu-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #ffb347, #ffd89b);
+    border-radius: 3px;
+}
+
+/* ------------------ СЕКЦИЯ "О НАС" ------------------ */
+.about-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff8f0;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-video {
+    flex: 0 0 auto;
+}
+
+.custom-video {
+    width: 325px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    display: block;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-text h3 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #5c2e1e;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ffb347;
+    border-radius: 2px;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #4a2a1a;
+    margin-bottom: 15px;
+}
+
+.about-text .brand {
+    color: #ff8c00;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+}
+
+/* ------------------ КАРТОЧКИ ТОВАРОВ (КАТАЛОГ) ------------------ */
+.gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    flex: 1;
+    min-width: 250px;
+}
+
+.description h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+    display: block;
+}
+
+/* Полоска под заголовком */
+.description h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffb347;
+    border-radius: 2px;
+}
+
+.description p {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.description .price {
+    font-size: 20px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* ------------------ ФОН СТРАНИЦЫ ------------------ */
+body {
+    background-image: url('https://sun9-72.userapi.com/s/v1/ig2/BWwyXZDD3ISep1orRsEL8hVhe7Zq5Zl0ZFLvxkcZ5yb8gU00PK0vSV02r_uXABA-_ytJBD9Zx865UFh4KF7524iq.jpg?quality=95&as=32x21,48x32,72x48,108x72,160x107,240x160,360x240,480x320,540x360,640x427,720x480,1080x720,1280x853,1440x960,1536x1024&from=bu&u=bgzmD3sozwnwAIF-jAoFNWiwtJjV1vrTNAiPdohrjWE&cs=1536x0');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* ------------------ ПРАЙС-ЛИСТ ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #faf5ef;
+    padding: 40px 20px;
+}
+
+/* Заголовок прайс-листа */
+.pricelist-title {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #5c2e1e, #ffb347);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.pricelist-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ffb347;
+    border-radius: 3px;
+}
+
+/* Сетка 5 карточек */
+.pricelist-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Карточка */
+.price-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.price-card h3 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #5c2e1e;
+    border-bottom: 2px solid #ffd89b;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Позиция в карточке */
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 0.9rem;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Название с картинкой */
+.item-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4a2a1a;
+}
+
+.item-name img {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Цена */
+.price-item span:last-child {
+    color: #e74c3c;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Примечание внизу карточки */
+.price-note {
+    margin-top: 15px;
+    font-size: 0.75rem;
+    color: #7f8c8d;
+    text-align: center;
+    background: #fff8f0;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+
+/* ------------------ КОНТАКТЫ ------------------ */
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff8f0;
+    margin: 40px auto;
+    max-width: 600px;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+#contact h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #5c2e1e;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+#contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: #ffb347;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    margin: 12px 0;
+    color: #4a2a1a;
+}
+
+#contact a {
+    color: #4a2a1a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #ffb347;
+}
+
+/* ------------------ ПОДВАЛ ------------------ */
+footer {
+    background: #2c1810;
+    color: #ffd89b;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.85rem;
+}
+/* ------------------ ИНДИВИДУАЛЬНЫЙ ЗАКАЗ ------------------ */
+#custom {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.custom-title {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #5c2e1e;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.custom-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ffb347;
+}
+
+.custom-subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.custom-form .form-group {
+    margin-bottom: 20px;
+}
+
+.custom-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #5c2e1e;
+}
+
+.custom-form input,
+.custom-form select,
+.custom-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ffd89b;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fefaf5;
+}
+
+.custom-form input:focus,
+.custom-form select:focus,
+.custom-form textarea:focus {
+    outline: none;
+    border-color: #ffb347;
+    box-shadow: 0 0 0 3px rgba(255, 180, 71, 0.2);
+}
+
+.submit-button {
+    background: #ffb347;
+    color: #2c1810;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background: #ff8c00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+/* Отзывы — без аватарок, карточки */
+#reviews {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.reviews-title {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #5c2e1e;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.reviews-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ffb347;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.review-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #5c2e1e;
+    margin-bottom: 5px;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 12px;
+}
+
+.review-stars {
+    color: #ffb347;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    color: #4a2a1a;
+    line-height: 1.5;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.review-dish {
+    display: inline-block;
+    background: #fff0e0;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    color: #ff8c00;
+    font-weight: bold;
+    margin-top: 10px;
+}
